@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top level div -->
+    <div class="Top">
+        
+        <div class="container"> 
+            <h1>Password generator</h1>
+            <div class="display-container"> 
+                <input readonly placeholder="Password" class="display" data-passwardDisplay>
+                <button class="copyBtn" data-copy>
+                    <span data-copyMsg ></span>
+                    <img src="./images/copy.svg" alt="copy" width="23" height="23">
+                </button>
+            </div>
+            <div class="input-container">
+                <!-- passward length section -->
+                <div class="length-container">
+                    <p>Passward Length</p>
+                    <p data-lengthNumber> 0 </p>
+                </div>
+                <!-- slider -->
+                <input  type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+                <!-- check-boxes -->
+                <div class="check">
+                    <input type="checkbox" id="uppercase" >
+                    <label for="uppercase">Include Upppercase Letters</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="lowercase">
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="numbers">
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="symbols">
+                    <label for="symbols">Include Symbols</label>
+                </div>
+                <div class="strength-container">
+                    <p>Strength</p>
+                    <div class="indicator" data-indicator></div>
+                </div>
+                <!--generator passward button-->
+                <button class="generatebutton">Generate Passward</button>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
